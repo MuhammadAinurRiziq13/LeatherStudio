@@ -1,0 +1,51 @@
+export const testimonials = [
+    {
+      text: "Saya sangat puas dengan kualitas produk dari LEATHER STUDIO. Tas kulit yang saya beli masih awet setelah 2 tahun pemakaian.",
+      name: "Ahmad Rizki",
+      role: "Pelanggan",
+      image: "/testimonials/person1.jpg",
+      rating: 5,
+      bgColor: "bg-yellow-300",
+    },
+    {
+      text: "Produk kulit asli dengan finishing yang sangat baik. Jahitan rapi dan detail yang sangat diperhatikan. Worth every penny!",
+      name: "Lisa Permata",
+      role: "Pelanggan",
+      image: "/testimonials/person2.jpg",
+      rating: 5,
+      bgColor: "bg-cyan-300",
+    },
+    {
+      text: "Saya mengapresiasi pilihan produk vegan yang ramah lingkungan. Kualitasnya tidak kalah dengan produk kulit asli.",
+      name: "Budi Santoso",
+      role: "Pelanggan",
+      image: "/testimonials/person3.jpg",
+      rating: 5,
+      bgColor: "bg-lime-300",
+    },
+    {
+      text: "Pelayanan sangat ramah dan cepat. Saya diberi banyak rekomendasi produk yang sesuai dengan kebutuhan saya.",
+      name: "Maya Lestari",
+      role: "Pelanggan",
+      image: "/testimonials/person4.jpg",
+      rating: 4,
+      bgColor: "bg-pink-300",
+    },
+    {
+      text: "Kualitas dompet kulitnya luar biasa. Warna dan teksturnya tetap bagus meski sering dipakai.",
+      name: "Dimas Prakoso",
+      role: "Pelanggan",
+      image: "/testimonials/person5.jpg",
+      rating: 5,
+      bgColor: "bg-purple-300",
+    },
+    {
+      text: "Desain produk LEATHER STUDIO sangat elegan dan cocok untuk hadiah. Teman saya sangat menyukainya.",
+      name: "Sinta Dewi",
+      role: "Pelanggan",
+      image: "/testimonials/person6.jpg",
+      rating: 5,
+      bgColor: "bg-green-300",
+    },
+  ];
+  
