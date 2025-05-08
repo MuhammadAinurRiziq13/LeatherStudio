@@ -1,10 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Menu, X, Search, User, Heart, ShoppingBag } from "lucide-react";
 
 export default function Navbar() {
-  const router = useRouter();
   const searchInputRef = useRef<HTMLDivElement>(null);
 
   const [isScrolled, setIsScrolled] = useState(false);
