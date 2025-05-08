@@ -126,7 +126,7 @@ export default function Collection() {
   }, [filters, products]);
 
   // Handle filter changes
-  const handleFilterChange = (key: keyof FilterState, value: any) => {
+  const handleFilterChange = <K extends keyof FilterState>(key: K, value: FilterState[K]) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -145,7 +145,7 @@ export default function Collection() {
   // Generate page numbers array
   const getPageNumbers = () => {
     const maxPagesToShow = 5;
-    let pages = [];
+    const pages: (number | string)[] = [];
 
     if (totalPages <= maxPagesToShow) {
       // If total pages is less than max to show, display all pages

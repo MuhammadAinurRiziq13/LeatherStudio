@@ -14,7 +14,7 @@ const TestimonialCard = ({ item, getRandomImage }: TestimonialCardProps) => (
         <Star key={i} size={18} className={i < item.rating ? "text-yellow-500 fill-yellow-500" : "text-gray-200"} />
       ))}
     </div>
-    <p className="text-gray-600 mb-6 italic">"{item.text}"</p>
+    <p className="text-gray-600 mb-6 italic">&quot;{item.text}&quot;</p>
     <div className="flex items-center gap-3">
       <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-200">
         <Image src={getRandomImage(100, 100)} alt={item.name} width={40} height={40} className="object-cover" unoptimized />

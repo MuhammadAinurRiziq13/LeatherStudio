@@ -1,4 +1,4 @@
-import { ChevronRight, ArrowRight, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 import Image from "next/image";
 
 type CategoryProps = {

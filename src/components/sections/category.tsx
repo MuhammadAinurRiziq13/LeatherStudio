@@ -25,7 +25,7 @@ export default function Category({ getRandomImage }: CategoryProps) {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {categories.slice(0, 4).map((category, index) => (
+          {categories.slice(0, 4).map((category) => (
             <a key={category.slug} href={`/category/${category.slug}`} className="group relative h-80 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
               <Image src={getRandomImage(500, 700)} alt={category.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" unoptimized />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
