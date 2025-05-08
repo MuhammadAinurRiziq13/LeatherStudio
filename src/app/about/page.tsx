@@ -52,7 +52,7 @@ export default function About() {
             <div className="space-y-5 text-gray-600">
               <p className="leading-relaxed">Founded in 2015, Leather Studio began with a vision to bridge traditional craftsmanship with contemporary design, creating leather goods that stand the test of time.</p>
               <p className="leading-relaxed">Our artisans, with their decades of experience, meticulously handcraft each piece using techniques passed down through generations, blending them with modern innovations.</p>
-              <p className="leading-relaxed">We champion slow fashion and sustainability, crafting pieces that develop unique character as they accompany you through life's journeys.</p>
+              <p className="leading-relaxed">We champion slow fashion and sustainability, crafting pieces that develop unique character as they accompany you through life&apos;s journeys.</p>
             </div>
 
             <div className="mt-8">
@@ -115,7 +115,7 @@ export default function About() {
           <div className="absolute bottom-0 right-0 w-24 h-0.5 bg-yellow-600/80"></div>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-yellow-600/70 text-6xl font-serif opacity-30 mb-4">"</p>
-            <blockquote className="text-xl md:text-2xl font-light mb-8 leading-relaxed">We don't just make leather goods. We create companions for life's journey—objects that become more beautiful with time and use.</blockquote>
+            <blockquote className="text-xl md:text-2xl font-light mb-8 leading-relaxed">We don&apos;t just make leather goods. We create companions for life&apos;s journey—objects that become more beautiful with time and use.</blockquote>
             <div className="flex items-center justify-center">
               <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-yellow-600/80 p-0.5">
                 <img src={getRandomImage(100, 100)} alt="Marco Giannini" className="w-full h-full object-cover rounded-full" />
@@ -140,7 +140,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="text-lg font-medium mb-1">Material Selection</h3>
-                  <p className="text-xs text-gray-200">We source the finest ethically-produced leathers from the world's most prestigious tanneries.</p>
+                  <p className="text-xs text-gray-200">We source the finest ethically-produced leathers from the world&apos;s most prestigious tanneries.</p>
                 </div>
               </div>
               <div className="mt-6 flex items-center">
