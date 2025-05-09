@@ -114,7 +114,7 @@ export default function About() {
           <div className="absolute top-0 left-0 w-24 h-0.5 bg-yellow-600/80"></div>
           <div className="absolute bottom-0 right-0 w-24 h-0.5 bg-yellow-600/80"></div>
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-yellow-600/70 text-6xl font-serif opacity-30 mb-4">"</p>
+            <p className="text-yellow-600/70 text-6xl font-serif opacity-30 mb-4">&apos;</p>
             <blockquote className="text-xl md:text-2xl font-light mb-8 leading-relaxed">We don&apos;t just make leather goods. We create companions for life&apos;s journey—objects that become more beautiful with time and use.</blockquote>
             <div className="flex items-center justify-center">
               <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-yellow-600/80 p-0.5">
