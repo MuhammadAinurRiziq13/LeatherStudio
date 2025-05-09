@@ -8,7 +8,7 @@ import Announcement from "@components/sections/announcement";
 import { popularProducts } from "@/constants/products";
 import ProductCard from "@components/productCard";
 import { Filter, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from "lucide-react";
-// import { Product } from "@/types/dto";
+import { Product } from "@/types/dto";
 
 // Define filter types and extend Product for internal use
 type SortOption = "newest" | "price-low" | "price-high" | "rating";
@@ -20,29 +20,13 @@ type FilterState = {
   sort: SortOption;
 };
 
-// Extended product type with category for filtering
-interface ExtendedProduct {
-  id: number;
-  name: string;
-  price: string;
-  rating: string;
-  isNew?: boolean;
-  image?: string; // Make image optional in our working type
-  category?: string;
-  // Add any other potential fields from popularProducts that aren't in Product
-  brand?: string;
-  bgColor?: string;
-  originalPrice?: string;
-  discount?: string;
-}
-
 export default function Collection() {
   // Image generator
   const [getRandomImage, setRandomImage] = useState<((w: number, h: number) => string) | null>(null);
 
   // Products state
-  const [products, setProducts] = useState<ExtendedProduct[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<ExtendedProduct[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
   // Filter state
   const [filters, setFilters] = useState<FilterState>({
@@ -69,9 +53,8 @@ export default function Collection() {
     });
 
     // Initialize products and extract categories
-    // Add category to each product for filtering purposes (pretend data)
     const productCategories = ["clothing", "accessories", "footwear", "jewelry"];
-    const allProducts: ExtendedProduct[] = [...popularProducts].map((product) => ({
+    const allProducts: Product[] = [...popularProducts].map((product) => ({
       ...product,
       category: productCategories[Math.floor(Math.random() * productCategories.length)],
       // Generate image for each product since they don't have one
