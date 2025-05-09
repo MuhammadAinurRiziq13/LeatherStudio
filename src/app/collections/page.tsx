@@ -8,7 +8,7 @@ import Announcement from "@components/sections/announcement";
 import { popularProducts } from "@/constants/products";
 import ProductCard from "@components/productCard";
 import { Filter, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from "lucide-react";
-import { Product } from "@/types/dto";
+// import { Product } from "@/types/dto";
 
 // Define filter types and extend Product for internal use
 type SortOption = "newest" | "price-low" | "price-high" | "rating";
@@ -21,9 +21,20 @@ type FilterState = {
 };
 
 // Extended product type with category for filtering
-type ExtendedProduct = Product & {
+interface ExtendedProduct {
+  id: number;
+  name: string;
+  price: string;
+  rating: string;
+  isNew?: boolean;
+  image?: string; // Make image optional in our working type
   category?: string;
-};
+  // Add any other potential fields from popularProducts that aren't in Product
+  brand?: string;
+  bgColor?: string;
+  originalPrice?: string;
+  discount?: string;
+}
 
 export default function Collection() {
   // Image generator
@@ -60,9 +71,11 @@ export default function Collection() {
     // Initialize products and extract categories
     // Add category to each product for filtering purposes (pretend data)
     const productCategories = ["clothing", "accessories", "footwear", "jewelry"];
-    const allProducts = [...popularProducts].map((product) => ({
+    const allProducts: ExtendedProduct[] = [...popularProducts].map((product) => ({
       ...product,
       category: productCategories[Math.floor(Math.random() * productCategories.length)],
+      // Generate image for each product since they don't have one
+      image: getRandomImage ? getRandomImage(500, 600) : "",
     }));
 
     setProducts(allProducts);
@@ -213,7 +226,7 @@ export default function Collection() {
                 <select
                   className="appearance-none bg-white border border-gray-200 rounded-md px-4 py-2 pr-8 focus:outline-none focus:ring-1 focus:ring-yellow-600 text-sm"
                   value={filters.sort}
-                  onChange={(e) => handleFilterChange("sort", e.target.value)}
+                  onChange={(e) => handleFilterChange("sort", e.target.value as SortOption)}
                 >
                   <option value="newest">Newest</option>
                   <option value="price-low">Price: Low to High</option>
